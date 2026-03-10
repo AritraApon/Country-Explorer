@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <!-- font awesome cnd ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- daisyUI + tailwind css  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- css link  -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="max-w-[1480px] mx-auto h-full bg-[url('./pic/bg-3.jpg')] bg-no-repeat bg-center bg-cover rounded-b-lg ">
+    <header
+        class="sticky top-0 z-50 bg-[url('./pic/bg.webp')] bg-no-repeat bg-center bg-cover rounded-b-lg border-b-10 border-red-700  ">
+
+        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 shadow py-4 px-5 ">
+
+            <!-- heading logo  -->
+            <div class="flex items-center">
+                <img class="w-[70px]" src="./pic/world-removebg-preview.png" alt="">
+                <h1 class="font-bold text-2xl text-white">Country Explorer</h1>
+            </div>
+            <!-- search box ... -->
+            <div class="flex items-center gap-2">
+                <label class="input outline-none">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input type="search" required placeholder="Country name" />
+                </label>
+                <button class="btn bg-red-200 ">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <!-- flag img container  -->
+        <section class=" w-11/12 mx-auto   my-10">
+            <div id="flag_container" class="grid grid-cols-2 md:grid-cols-8 gap-2  ">
+                <!-- <div class="flex justify-center items-center shadow py-3">
+                 <div class=" space-y-2 ">
+                    <p class="font-bold ">Country name</p>
+                    <img src="./pic/Flag_of_Bangladesh.svg.png" alt="county-flag" class="w-[100px] ">
+                </div>
+               </div> -->
+
+            </div>
+        </section>
+
+
+        <!-- You can open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_3.showModal()">open modal</button>
+        <dialog id="my_modal_3" class="modal">
+            <div class="modal-box">
+                <form method="dialog">
+                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                </form>
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click on ✕ button to close</p>
+            </div>
+        </dialog>
+
+        <div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="bg-[url('./pic/bg.webp')] bg-cover bg-center rounderd-lg p-10 ">
+        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 shadow py-4 px-5 ">
+
+            <!-- heading logo  -->
+            <div class="flex items-center ">
+                <!-- <img class="w-[70px]" src="./pic/world-removebg-preview.png" alt=""> -->
+                <h1 class="font-bold text-xl text-white">Country Explorer</h1>
+            </div>
+            <div class="flex items-center gap-2">
+                <label class="input outline-none">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input type="search" required placeholder="Country name" />
+                </label>
+                <button class="btn bg-red-200 ">Search</button>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
