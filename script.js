@@ -77,6 +77,38 @@ const displayModal = (info) => {
 
 };
 
+
+
+// filter
+const filterByRegion = (region) => {
+    spinner(true)
+  if (region === "All") {
+    displayCountryData(allCountries);
+  } else {
+    const filtered = allCountries.filter(c => c.region.toLowerCase() === region.toLowerCase());
+    displayCountryData(filtered);
+  }
+    spinner(false);
+};
+
+
+
+// Button events
+document.getElementById('btn_all').addEventListener("click", () => filterByRegion("All"));
+document.getElementById('btn_asia').addEventListener("click", () => filterByRegion("Asia"));
+document.getElementById('btn_europe').addEventListener("click", () => filterByRegion("Europe"));
+document.getElementById('btn_africa').addEventListener("click", () => filterByRegion("Africa"));
+document.getElementById('btn_america').addEventListener("click", () => {
+  // America মানে আসলে "Americas" region
+  filterByRegion("Americas");
+});
+
+
+
+
+
+
+
 document.getElementById('search_btn').addEventListener("click", () => {
     const input = document.getElementById('section_input');
     const searchInput = input.value.trim().toLowerCase();
@@ -84,7 +116,7 @@ document.getElementById('search_btn').addEventListener("click", () => {
     let filtered;
 
     if (searchInput === '') {
-        filtered = allCountries;
+        filtered = displayCountryData();
     } else {
         filtered = allCountries.filter(country =>
             country.name.common.toLowerCase().includes(searchInput)
@@ -92,8 +124,11 @@ document.getElementById('search_btn').addEventListener("click", () => {
     }
 
     if (filtered.length === 0) {
-        document.getElementById('flag_container').innerHTML =
-            `<p class="text-center text-red-500 text-xl">No country found</p>`;
+  document.getElementById('flag_container').innerHTML = `
+  <div class="flex justify-center items-center w-full  mx-auto">
+    <p class="text-red-500 font-bold   mx-auto text-4xl">No country found</p>
+  </div>
+`;
     } else {
         displayCountryData(filtered);
     }

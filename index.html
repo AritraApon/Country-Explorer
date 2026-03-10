@@ -22,7 +22,8 @@
 
 </head>
 
-<body class="max-w-[1480px] mx-auto h-full bg-[url('./pic/bg-3.jpg')] bg-no-repeat bg-center bg-cover rounded-b-lg ">
+<body
+    class="max-w-[1480px] mx-auto min-h-screen flex flex-col bg-[url('./pic/bg-3.jpg')] bg-no-repeat bg-center bg-cover rounded-b-lg ">
     <header
         class="sticky top-0 z-50 bg-[url('./pic/bg.webp')] bg-no-repeat bg-center bg-cover rounded-b-lg border-b-10 border-red-700  ">
 
@@ -45,12 +46,24 @@
                     </svg>
                     <input id="section_input" type="search" required placeholder="Country name" />
                 </label>
-                <button id="search_btn" class="btn bg-red-200 ">Search</button>
+                <button id="search_btn" class="btn bg-primary ">Search</button>
             </div>
         </div>
     </header>
-    <main>
+    <main class="flex-grow">
 
+
+        <section>
+            <div id="region_buttons" class="flex gap-2 my-4 justify-center">
+                <button id="btn_all" class="btn bg-blue-300">All</button>
+                <button id="btn_asia" class="btn bg-green-300">Asia</button>
+                <button id="btn_europe" class="btn bg-yellow-300">Europe</button>
+                <button id="btn_africa" class="btn bg-purple-300">Africa</button>
+                <button id="btn_america" class="btn bg-red-300">America</button>
+            </div>
+
+
+        </section>
         <!-- spinner section  -->
         <section id="spinner" class="flex justify-center items-center mt-32">
             <span class="loading loading-dots loading-4xl text-red "></span>
