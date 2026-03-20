@@ -35,7 +35,8 @@ A simple and modern web application to explore countries around the world with d
 
 <!-- Add your screenshots here -->
 ![App Screenshot]<img width="1677" height="1030" alt="image" src="https://github.com/user-attachments/assets/179401ed-8834-4a98-af22-73969de2a4a0" />
-<img width="477" height="1030" alt="image" src="https://github.com/user-attachments/assets/c4f50a7a-3fb8-4f6b-81c8-2fe37f6ba4fb" />
+<img width="477" height="1030" alt="image" src="https://github.com/user-attachments/assets/c4f50a7a-3fb8-4f6b-81c8-2fe37f6ba4fb" /><img width="540" height="993" alt="image" src="https://github.com/user-attachments/assets/e1418c0f-8784-49b0-af03-e5c2991ed4ad" />
+
 
 
 
